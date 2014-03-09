@@ -1,0 +1,4 @@
+# Setup RVM
+source /home/znatz/.rvm/scripts/rvm
+# Setup NVM
+source ~/.nvm/nvm.sh

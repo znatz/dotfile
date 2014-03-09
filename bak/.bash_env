@@ -1,0 +1,13 @@
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+
+[[ -s /home/znatz/.nvm/nvm.sh ]] && . /home/znatz/.nvm/nvm.sh # This loads NVM
+export MONGODB_DEV_HOST=ds027668.mongolab.com
+export MONGODB_DEV_PORT=27668
+export MONGODB_DEV_DB=znatz
+export MONGODB_DEV_USR=znatz
+export MONGODB_DEV_PWD=matsuno
+export MONGODB_DEV_URI=mongodb://${MONGODB_DEV_USR}:${MONGODB_DEV_PWD}@${MONGODB_DEV_HOST}:${MONGODB_DEV_PORT}/${MONGODB_DEV_DB}
+
+alias gomongolab='mongo $MONGODB_DEV_HOST:$MONGODB_DEV_PORT/$MONGODB_DEV_DB -u $MONGODB_DEV_USR -p $MONGODB_DEV_PWD --shell'

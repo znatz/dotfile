@@ -1,0 +1,20 @@
+<und>============ Reminder ==================
+<und>Bash:
+http://www.faqs.org/docs/Linux-HOWTO/Bash-Prompt-HOWTO.html
+<und>Tmux:
+vertically   split windows CTRL +B -> SHIFT+%
+horizontally split windows CTRL +B -> SHIFT+"
+close windows              CTRL +B -> SHIFT+!
+<und>Java:
+Installed through
+http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
+changed java security in /usr/lib/jvm/java-8-oracle/bin/ControlPanel
+<und>Installed:
+rvm | ruby | bundler | vim | nvm | node | java |
+gimp| skype| inkscape|  eclipse  | playonlinux |
+bower |
+virtualbox |
+  chrome   | brackets| <- brakets accepts only chrome
+codeblocks | openFrameworks | 
+    cpanm  |  carton | plack|
+ android sdk  | javafx |

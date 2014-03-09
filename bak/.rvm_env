@@ -1,0 +1,7 @@
+#!/bash/sh
+source "$HOME/.rvm/scripts/rvm"
+rvm use ruby-2.1-head
+echo "Called"
+echo $HOME
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/gems/ruby-2.1-head/bin

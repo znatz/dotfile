@@ -1,0 +1,3 @@
+PATH=/usr/local/heroku/bin:/home/znatz/.rvm/gems/ruby-2.1.0-preview1/bin:/home/znatz/.rvm/gems/ruby-2.1.0-preview1@global/bin:/home/znatz/.rvm/rubies/ruby-2.1.0-preview1/bin:/home/znatz/.rvm/bin:/home/znatz/.nvm/v0.11.2/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/pgsql/bin
+LD_LIBRARY_PATH=/usr/local/pgsql/lib
+export LD_LIBRARY_PATH
