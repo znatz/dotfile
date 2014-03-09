@@ -16,7 +16,7 @@ centralizeme(){
 	line=$@
 	chrcount=${#line}
 	width=${COLUMNS}
-	paddingnum=$((width / 2 - chrcount /2))
+	paddingnum=$((width / 2 - chrcount / 2 ))
 	padding=${empty:0:$paddingnum}
 	echo "$padding$@"
 }
@@ -27,6 +27,7 @@ do
 		#http://askubuntu.com/questions/89995/bash-remove-first-and-last-characters-from-a-string
 		trimline=${line:5} 
 		#printf "$(tput sgr 0 1)${txtbld}$(tput setaf 3)$(tput setab 7)$trimline" 
+		echo -n "              " # To offset special tput string
 		centralizeme "$(tput sgr 0 1)${txtbld}$(tput setaf 3)$(tput setab 7)$trimline$(tput sgr0)" 
 	else
 		centralizeme $line
