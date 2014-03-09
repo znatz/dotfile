@@ -15,9 +15,11 @@ centralizeme(){
 	empty="                                                                                                                                                                                                                                                                                                     "
 	line=$@
 	chrcount=${#line}
+	#chrcount=${#line}
 	width=${COLUMNS}
 	paddingnum=$((width / 2 - chrcount / 2 ))
-	padding=${empty:0:$paddingnum}
+	paddingnum=$((width / 2 - chrcount / 2 ))
+	[ "$width" -gt "$chrcount" ] && padding=${empty:0:$paddingnum} || padding=""
 	echo "$padding$@"
 }
 
