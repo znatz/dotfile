@@ -15,7 +15,7 @@ changed java security in /usr/lib/jvm/java-8-oracle/bin/ControlPanel
 | rvm | ruby | bundler | vim | nvm | node | java |
 | gimp| skype| inkscape|  eclipse  | playonlinux |
 | bower |
-| virtualbox |
+| virtualbox | vagrant | boot2docker |
 |   chrome   | brackets| <- brakets accepts only chrome
 | codeblocks | openFrameworks | 
 |     cpanm  |  carton | plack|

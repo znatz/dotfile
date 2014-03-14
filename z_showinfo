@@ -10,7 +10,6 @@ pass=${bldblu}*${txtrst}
 warn=${bldred}*${txtrst}
 ques=${bldblu}?${txtrst}
 
-printf "\n"
 centralizeme(){
 	empty="                                                                                                                                                                                                                                                                                                     "
 	line=$@
