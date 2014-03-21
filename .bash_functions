@@ -39,7 +39,7 @@ unpackme(){
  case "$fn" in
         *".tgz"|*.tar.gz)
         	echo "Unpacking targz or tgz";
-        	tar -xzvf $fn;;
+        	tar xzvf $fn;;
         *.lzh|*.lha)
         	echo "Unpacking lzh";
         	lha x $fn;;
@@ -47,7 +47,7 @@ unpackme(){
         	echo "Unpacking zip";;
         *.tar.bz2|*.tbz)
         	echo "Unpacking tar.bz2 or tbz";
-        	tar -xjvf $fn;;
+        	tar xjvf $fn;;
         *.bz2)
         	echo "Unpacking bz2";
         	bzip2 -d $fn;;
@@ -68,7 +68,7 @@ unpackme(){
         	echo "Unpacking z";;
         *.tar)
         	echo "Unpacking tar";
-        	tar -xvf $fn;;
+        	tar xvf $fn;;
         *.arj)
         	echo "Unpacking arj";;
         *.cab)
@@ -76,7 +76,18 @@ unpackme(){
  esac
 }
 
-
+findPid () {
+	 echo 'lsof -t -c "$@"'
+	 lsof -t -c "$@" ; 
+}
+listmyusb(){
+	echo 'sudo fdisk -ls'
+	sudo fdisk -ls
+}
+ejectmyuse(){
+	echo 'udisks --detach /dev/sdb'
+	udisks --detach /dev/sdb
+}
 colormycommand()(set -o pipefail;"$@" 2>&1>&3|sed $'s,.*,\e[31m&\e[m,'>&2)3>&1
 export MOZILLA_FIVE_HOME=/usr/lib/firefox
 PATH="$PATH":$HOME/mycommand

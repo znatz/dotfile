@@ -7,6 +7,8 @@ http://www.faqs.org/docs/Linux-HOWTO/Bash-Prompt-HOWTO.html
 vertically   split windows CTRL +B -> SHIFT+%
 horizontally split windows CTRL +B -> SHIFT+"
 close windows              CTRL +B -> SHIFT+!
+<und>awesome
+http://awesome.naquadah.org/wiki/Getting_started
 <und>Java
 Installed through
 http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
@@ -20,3 +22,4 @@ changed java security in /usr/lib/jvm/java-8-oracle/bin/ControlPanel
 | codeblocks | openFrameworks | 
 |     cpanm  |  carton | plack|
 |  android sdk  | javafx |
+|   awesome  | i3 | conky | mocp | xfce4-screenshooter |
