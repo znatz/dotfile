@@ -1,0 +1,14 @@
+goto(){
+  declare -A shortDirs
+  shortDirs=(["log"]="$HOME/PGround/"
+		   ["loghttpd"]="$HOME/PGround/src"
+	)
+  for key in ${!shortDirs[*]}; do
+    if [ "$key" = "$1" ]; then
+      cd ${shortDirs[$key]}
+      return 0
+    fi
+  done
+  cd ~
+}	
+complete -W log goto

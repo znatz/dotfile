@@ -1,6 +1,21 @@
 # Sexy Solarized Bash Prompt, inspired by "Extravagant Zsh Prompt"
 # Screenshot: http://img.gf3.ca/d54942f474256ec26a49893681c49b5a.png
 
+case $TERM in
+    xterm* | screen)
+        CORNER_TOP="\[\033(0l\033(B\]"
+        CORNER_LTOP="\[\033(0m\033(B\]"
+        CORNER_BOTTOM="\[\033(0k\033(B\]"
+        LINE_TWO="\[\033(0qq\033(B\]"
+        LINE_PLUS="\[\033(0n\033(B\]"
+        LINE_RIGHT="\[\033(0t\033(B\]"
+        LINE_LEFT="\[\033(0u\033(B\]"
+        ;;
+    *)
+        LINE_TWO="--"
+        ;;
+esac
+
 #if [[ $COLORTERM = gnome-* && $TERM = xterm ]]  && infocmp
 #gnome-256color >/dev/null 2>&1; then TERM=gnome-256color; fi
 if tput setaf 1 &> /dev/null; then
@@ -54,7 +69,7 @@ else
     RESET="\033[m"
 fi
 
-BACKGROUND="\033[44m"
+BACKGROUND="\033[47m"
 
 parse_git_dirty () {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit
@@ -67,4 +82,5 @@ parse_git_branch () {
 #PS1="\[${BOLD}${CYAN}${BACKGROUND}\]\u \[$BASE0\]at \[$CYAN\]\h \[$BASE0\]in \[$BLUE\]\w\[$BASE0\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \"
 #on \")\[$YELLOW\]\$(parse_git_branch)\[$BASE0\]\n\$ \[$RESET\]"
 #PS1="\[${BOLD}${CYAN}${BACKGROUND}\]\u \[$BASE0\]at \[$CYAN\]\h \[$BASE0\]in \[$BLUE\]\w\[$BASE0\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$YELLOW\]\$(parse_git_branch)\[$BASE0\]\[$RESET\]\n\[${BOLD}${CYAN}${BACKGROUND}\]\$ \[$RESET\]"
-PS1="\[${BOLD}${CYAN}${BACKGROUND}\]\u\[$BASE0\]◎ \[$CYAN\]\h\[$BASE0\]◎ \[$BLUE\]\w\[$BASE0\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$YELLOW\]\$(parse_git_branch)\[$BASE0\]\[$RESET\]\n\[${BOLD}${CYAN}${BACKGROUND}\]\$ \[$RESET\]"
+#PS1="${CORNER_TOP}${LINE_TWO}\[${BOLD}${CYAN}${BACKGROUND}\]\u\[$BASE0\]◎ \[$CYAN\]\h\[$BASE0\]◎ \[$BLUE\]\w\[$BASE0\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$YELLOW\]\$(parse_git_branch)\[$BASE0\]\[$RESET\]\n\[${BOLD}${CYAN}${BACKGROUND}\]\$ \[$RESET\]"
+PS1="${CORNER_TOP}${LINE_TWO}${LINE_RIGHT}\[${BOLD}${CYAN}${BACKGROUND}\]\u\[$BASE0\]${RESET}${LINE_LEFT}${LINE_TWO}${LINE_PLUS}${BOLD}${CYAN}${BACKGROUND}\[$BLUE\]\w${RESET}${LINE_PLUS}\[$BASE0\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \"${LINE_TWO}${LINE_PLUS}\")\[${BACKGROUND}${BOLD}$YELLOW\]\$(parse_git_branch)\[$BASE0\]\[$RESET\]${LINE_LEFT}${LINE_TWO}${CORNER_BOTTOM}\n${CORNER_LTOP}${LINE_TWO}\[${BOLD}${CYAN}${BACKGROUND}\]\$ \[$RESET\]"
