@@ -33,6 +33,11 @@ getmyfield(){
 alarmme(){
   sleep $1 && notify-send $2 &
 }
+unmuteall(){
+  for i in Master Headphone PCM Front Surround Center LFE Side; do
+    amixer -c 0 set "$i" playback unmute
+  done &>/dev/null
+}
 unpackme(){
  fn=$(echo "$1" | tr '[:upper:]' '[:lower:]')
  echo "$fn"
@@ -44,7 +49,8 @@ unpackme(){
         	echo "Unpacking lzh";
         	lha x $fn;;
         *.zip)
-        	echo "Unpacking zip";;
+        	echo "Unpacking zip";
+		unzip $fn;;
         *.tar.bz2|*.tbz)
         	echo "Unpacking tar.bz2 or tbz";
         	tar xjvf $fn;;
@@ -84,9 +90,12 @@ listmyusb(){
 	echo 'sudo fdisk -ls'
 	sudo fdisk -ls
 }
-ejectmyuse(){
+ejectmyusb(){
 	echo 'udisks --detach /dev/sdb'
 	udisks --detach /dev/sdb
+}
+playmovie(){
+	nohup mplayer $1 &
 }
 colormycommand()(set -o pipefail;"$@" 2>&1>&3|sed $'s,.*,\e[31m&\e[m,'>&2)3>&1
 export MOZILLA_FIVE_HOME=/usr/lib/firefox

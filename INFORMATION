@@ -3,23 +3,28 @@
 http://stackoverflow.com/questions/7554117/ssh-t-gitgithub-permission-denied-public-key
 <und>Bash
 http://www.faqs.org/docs/Linux-HOWTO/Bash-Prompt-HOWTO.html
-<und>Tmux
-vertically   split windows CTRL +B -> SHIFT+%
-horizontally split windows CTRL +B -> SHIFT+"
-close windows              CTRL +B -> SHIFT+!
-<und>awesome
-http://awesome.naquadah.org/wiki/Getting_started
+<und>Cmus
+https://github.com/cmus/cmus/blob/master/Doc/cmus-tutorial.txt#L190
+<und>Latest PHP5 & fbcmd
+http://fbcmd.dtompkins.com/installation
+<und>Mutt
+http://iishikawa.s371.xrea.com/note/mutt.html#id2405814
+http://www.bartbania.com/index.php/consolify-your-gmail-with-mutt/
+<und>Mplayer2
+http://crunchbang.org/forums/viewtopic.php?id=20178
 <und>Java
 Installed through
 http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
 changed java security in /usr/lib/jvm/java-8-oracle/bin/ControlPanel
 <und>Installed
 | rvm | ruby | bundler | vim | nvm | node | java |
-| gimp| skype| inkscape|  eclipse  | playonlinux |
+| gimp| skype| inkscape|  eclipse  | playonlinux | 
+| t | newsbeuter | ranger | mutt | mplayer2 |
+| dwb | links2 |
 | bower |
 | virtualbox | vagrant | boot2docker |
 |   chrome   | brackets| <- brakets accepts only chrome
 | codeblocks | openFrameworks | 
 |     cpanm  |  carton | plack|
 |  android sdk  | javafx |
-|   awesome  | i3 | conky | mocp | xfce4-screenshooter |
+|   awesome  | i3 | conky | cmus | xfce4-screenshooter |
